@@ -6,19 +6,16 @@ This document provides instructions for integrating rapid prototyping capabiliti
 
 ## Integration Instructions
 
-### Add to Your Cursor Rules
+### Add to Your Cursor Rules or Copilot Instructions
 
-Add the following section to your `.cursorrules` or copilot instructions:
+#### Rapid Prototyping Framework
 
-```markdown
-# Rapid Prototyping Framework
-
-## Core Files
+##### Core Files
 - `rapid-prototyping-mini.md` - Complete guide for 1-hour rapid prototyping sessions
 - `requirements-management.md` - Instructions for managing requirements-document.md files
 - `cursorrules-integration.md` - This integration guide
 
-## Development Principles
+##### Development Principles
 - Vanilla JavaScript ES6+ only (no frameworks for MVP)
 - HTML5 Canvas 2D API for rendering
 - Single port 8989 for all services
@@ -26,19 +23,20 @@ Add the following section to your `.cursorrules` or copilot instructions:
 - RESTful API under /api/ endpoints
 - Tailwind CSS + DaisyUI for styling
 
-## File Organization
+##### File Organization
 - Keep files under 400 lines
 - Use clear, descriptive file names
 - Organize by feature, not by file type
 - Maintain single responsibility per file
+- Don't add folders and files that arne't needed or used yet
 
-## AI Collaboration Rules
+##### AI Collaboration Rules
 - Always reference requirements-document.md
 - Update requirements as features are added
 - Test each feature before moving to the next
 - Ask for help with complex implementations
 - Document decisions and rationale
-```
+
 
 ## Additional AI Instructions
 

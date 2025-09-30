@@ -51,6 +51,16 @@ This guide enables successful rapid prototyping sessions using vanilla JavaScrip
 ## Development Principles
 
 ### File Organization
+
+#### Progressive Architecture
+Start with simple static files and only add complexity when needed. Many projects will never need more than HTML, CSS, and JavaScript files. Only add server-side code, APIs, and databases when the project actually requires them. Build one clear pathway through the system rather than creating multiple approaches.
+
+#### Code Cleanup Rules
+- **Remove unused code**: Always delete files, folders, functions, methods, and variables that are no longer used
+- **Improve existing files**: Enhance current code rather than creating new files and methods
+- **Single pathway**: Build one clear path through the system - don't create alternative approaches
+- **No legacy code**: Don't keep old code "just in case" - clean it up immediately
+- **Refactor, don't duplicate**: Improve existing code instead of creating new versions
 ```
 {project}/
 ├── run.sh              # Cross-platform startup script
