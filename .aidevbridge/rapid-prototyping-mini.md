@@ -9,7 +9,7 @@ This guide enables successful rapid prototyping sessions using vanilla JavaScrip
 - **Frontend**: Vanilla JavaScript ES6+, HTML5, CSS3
 - **Styling**: Tailwind CSS + DaisyUI (CDN)
 - **Backend**: Node.js with Express (single port 8989)
-- **Database**: SQLite (sqlite.db)
+- **Database**: SQLite (sqlite.db) via the 'sqlite3' npm package (use 'sqlite3' for Node.js v22+ compatibility)
 - **API**: RESTful endpoints under `/api/`
 
 
@@ -195,17 +195,22 @@ const api = {
 
 ### Database Patterns
 ```javascript
-// SQLite with better-sqlite3
-const db = new Database('sqlite.db');
-db.prepare(`
+// SQLite with sqlite3 (Node.js v22+ compatible)
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('sqlite.db');
+db.run(`
     CREATE TABLE IF NOT EXISTS posts (
         id INTEGER PRIMARY KEY,
         title TEXT,
         content TEXT,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )
-`).run();
+`);
 ```
+
+## New projects
+- Create /{project-name}/ and  /{project-name}/src folders and work in there when creating a brand new project, ask the user if you are not 100% sure that is what they want to do.
+- Continually avoid adding any unnecessary libraries, only ever suggest or use very trusted libraries
 
 ## Quality Gates
 

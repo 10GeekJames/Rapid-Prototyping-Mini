@@ -1,5 +1,3 @@
-Add the following note to your local IDE's llm instruction file:
-
 # Rapid Prototyping Framework Rules
 
 ## Core Instructions
@@ -16,37 +14,21 @@ Add the following note to your local IDE's llm instruction file:
 - Remove legacy code instead of keeping it "just in case"
 
 ## Script Creation Rules
-- Generate run.sh/run.bat and stop.sh/stop.bat for every project, use chmod +x ./run.sh ./stop.sh if on linux or comes up as needed by the user
+- Generate run.sh/run.bat and stop.sh/stop.bat for every project
 - Never use emojis, extended ASCII, or special characters in scripts
-- Avoid mix nested quotes issues
-- Avoid path issues: 
-    + BAD - C:\Users\Username\Project
-    + GOOD - "%~dp0ProjectFolder"
+- Avoid nested parentheses () inside other () - use different symbols
 - Use only standard ASCII characters (A-Z, a-z, 0-9, basic punctuation)
 - Always install dependencies automatically (cheap and ensures consistency)
 - Use port 8989 for all services, handle conflicts gracefully
-- never nest the triple tick marks / code marks use a different symbol
-- avoid complex chaining
-    + Bat Examples: ```
-    
-    BAD - Complex chaining with nested quotes: 
-    pushd Folder && echo "Starting" && npm start && popd
-
-    GOOD - Clear, step-by-step approach: 
-    if errorlevel 1 exit /b 1
-        echo Starting application...
-        npm start    
-    if errorlevel 1 exit /b 1
-
 
 ## Code Standards
 - Keep files under 400 lines
 - Use clear, descriptive file names
 - Single responsibility per file
-- (always) Vanilla JavaScript ES6+ only (no frameworks for MVP)
-- (always) Tailwind CSS + DaisyUI for styling
-- (as needed) SQLite database (sqlite.db)
-- (as needed) RESTful API under /api/ endpoints
+- Vanilla JavaScript ES6+ only (no frameworks for MVP)
+- Tailwind CSS + DaisyUI for styling
+- SQLite database (sqlite.db)
+- RESTful API under /api/ endpoints
 
 ## Quality Gates
 - Test each feature before moving to the next
@@ -55,5 +37,14 @@ Add the following note to your local IDE's llm instruction file:
 - Clean shutdown prevents orphaned processes
 - All acceptance criteria must be met before marking complete
 
-# Always
-- Read through .aidevbridge thuroughly
+
+## Development Workflow
+- Always work to implement the users requests as completely and thuroughly as you can.  
+- Do not stop to ask the user for interaction unless it is important.
+- Continue further, even if you think you have completed the task, until you are sure you have done everything you can to satisfy the users request.
+- If you are unsure about something, ask the user for clarification.
+- If you are unsure about what the user wants, ask for clarification.
+- Work with your built-in todo structure to make a great plan to implement the users request.
+- Always work to make the users request as complete and thurough as you can.
+- Work to complete all open todos before stopping
+- Always create more todos if you think of more things to do
