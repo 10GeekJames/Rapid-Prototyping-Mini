@@ -4,17 +4,20 @@ applyTo: "**"
 # Core Instructions
 - Always read and follow `copilot-instructions.md` and any files that are reference there
 - Thoroughly read and apply all `*.md` guidance from the `.aidevbridge` folder.
-- Always reference `requirements-document.md` for project scope and acceptance criteria.
+- Always reference `requirements-management.md` for rules to help build backlogs and manage requirements.
 - Follow the `rapid-prototyping-mini.md` workflow for 1-hour development sessions.
-- Use `cursorrules-integration.md` for code standards and patterns.
+- Use `cursor-copilot-instructions.md` for additional llm instructions, code standards, and patterns.
+
+## Once a backlog is created in a project folder follow these rules:
+- Always reference projects `requirements-document.md` for project scope and acceptance criteria and to make updates as development progresses.
 
 # Rapid Prototyping Framework Rules
 
 ## Core Instructions
 - Thoroughly read and apply all guidance from the `.aidevbridge` folder.
-- Always reference `requirements-document.md` for project scope and acceptance criteria.
+- Always reference `requirements-document.md` for project scope and acceptance criteria, and `requirements-management.md` for rules to help build backlogs and manage requirements.
 - Follow the `rapid-prototyping-mini.md` workflow for 1-hour development sessions.
-- Use `cursorrules-integration.md` for code standards and patterns.
+- Use `cursor-copilot-instructions.md` for code standards and patterns.
 
 ## Development Principles
 - Start with simple static files; add complexity only when needed.
@@ -77,3 +80,4 @@ applyTo: "**"
 
 ## Always
 - Read through the `.aidevbridge` folder thoroughly and follow the policies and patterns inside.
+

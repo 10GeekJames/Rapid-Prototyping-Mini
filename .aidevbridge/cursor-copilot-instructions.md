@@ -13,7 +13,7 @@ This document provides instructions for integrating rapid prototyping capabiliti
 ##### Core Files
 - `rapid-prototyping-mini.md` - Complete guide for 1-hour rapid prototyping sessions
 - `requirements-management.md` - Instructions for managing requirements-document.md files
-- `cursorrules-integration.md` - This integration guide
+- `cursor-copilot-instructions.md` - This integration guide
 
 ##### Development Principles
 - Vanilla JavaScript ES6+ only (no frameworks for MVP)
