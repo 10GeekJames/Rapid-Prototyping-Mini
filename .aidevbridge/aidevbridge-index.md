@@ -1,3 +1,36 @@
+# AI DevBridge Index
+
+This file is the central index and medium-level router for all rapid prototyping and requirements management guidance in this repository.
+
+## Where to Find Guidance
+
+- For the full rapid prototyping framework, project structure, and development workflow rules, **see [`rapid-prototyping-mini.md`](./rapid-prototyping-mini.md)**.
+- For requirements management, backlog building, and requirements-document.md usage, **see [`requirements-management.md`](./requirements-management.md)**.
+
+## Key Principles (from the detailed guides)
+
+- **Always break HTML, CSS, and JS into separate files and organize by feature.**
+- **Never use inline `<script>` or `<style>` tags.**
+- **Use a color-by-number folder structure as your project grows.**
+- **If you need to store data, create a full backend in `/api/` with SQLite.**
+- **Use a Minimal Flask API backend for APIs, on a single port, in `/api/`.**
+- **Keep requirements-document.md up to date and reference it for all scope and acceptance criteria.**
+
+## How to Use This Repository
+
+1. **Start with `copilot-instructions.md`** for a high-level overview and links to these guides.
+2. **Use this file as your quick reference for the most important rules and where to find details.**
+3. **Dive into `rapid-prototyping-mini.md` and `requirements-management.md` for all detailed rules, patterns, and examples.**
+
+## Why This Structure?
+
+This pyramid approach ensures:
+- Consistency and clarity across all projects
+- Easy onboarding for new contributors
+- Rapid, high-quality prototyping
+- Maintainable, scalable codebases
+
+**If in doubt, start at the top and work your way down for more detail.**
 # LLM Instructions for Rapid Prototyping
 
 ## Overview
@@ -9,33 +42,34 @@ This document provides instructions for integrating rapid prototyping capabiliti
 ### Rapid Prototyping Framework
 
 #### Core Files
-- `rapid-prototyping-mini.md` - Complete guide for 1-hour rapid prototyping sessions
-- `requirements-management.md` - Instructions for managing requirements-document.md files
-- `cursor-copilot-instructions.md` - This integration guide
 
 #### Development Principles
-- Vanilla JavaScript ES6+ only (no frameworks for MVP)
-- HTML5 Canvas 2D API for rendering
-- Single port 8989 for all services, static site and api
-- SQLite database (sqlite.db)
-- RESTful API under /api/ endpoints
-- Tailwind CSS + DaisyUI for styling
 
 #### File Organization
-- Keep files under 400 lines
-- Use clear, descriptive file names
-- Organize by feature, not by file type
-- Maintain single responsibility per file
-- Don't add folders and files that arne't needed or used yet
 
 #### AI Collaboration Rules
-- Always reference requirements-document.md
-- Update requirements as features are added
-- Test each feature before moving to the next
-- Ask for help with complex implementations
-- Document decisions and rationale
 
+## Where to Find Guidance
 
+- For all rapid prototyping, project structure, and development workflow rules, **see [`copilot-instructions.md`](../.github/copilot-instructions.md)**.
+- For requirements management, backlog building, and requirements-document.md usage, **see [`requirements-management.md`](./requirements-management.md)**.
+
+## How to Use This Repository
+
+1. **Start with `copilot-instructions.md`** for the full rapid prototyping framework, file/folder organization, code standards, and AI collaboration rules.
+2. **Reference `requirements-management.md`** for all requirements gathering, backlog, and acceptance criteria management.
+3. **Follow the color-by-number project structure and workflow in `copilot-instructions.md` as your project grows.**
+4. **Always keep requirements-document.md up to date as you build.**
+
+## Why This Matters
+
+This approach ensures:
+- Consistency and clarity across all projects
+- Easy onboarding for new contributors
+- Rapid, high-quality prototyping
+- Maintainable, scalable codebases
+
+**If in doubt, start with `copilot-instructions.md` and follow the links and patterns provided there.**
 ## Additional AI Instructions
 
 ### When Starting a New Project

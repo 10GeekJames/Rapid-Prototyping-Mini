@@ -1,15 +1,25 @@
 ---
 applyTo: "**"
 ---
-# Core Instructions
-- Always read and follow `copilot-instructions.md` and any files that are reference there
-- Thoroughly read and apply all `*.md` guidance from the `.aidevbridge` folder.
-- Always reference `requirements-management.md` for rules to help build backlogs and manage requirements.
-- Follow the `rapid-prototyping-mini.md` workflow for 1-hour development sessions.
-- Use `cursor-copilot-instructions.md` for additional llm instructions, code standards, and patterns.
 
-## Once a backlog is created in a project folder follow these rules:
-- Always reference projects `requirements-document.md` for project scope and acceptance criteria and to make updates as development progresses.
+## Rapid Prototyping Copilot Instructions (High-Level Index)
+
+This file is the entry point for all rapid prototyping and requirements management guidance in this repository.
+
+**Start here, then read through and reference all files mentioned in [`aidevbridge-index.md`](../.aidevbridge/aidevbridge-index.md).**
+
+## How to Use This Repository
+
+1. **Begin with this file for a high-level overview.**
+2. **Move to `aidevbridge-index.md` for a summary of key rules and where to find details.**
+3. **Dive into `rapid-prototyping-mini.md` and `requirements-management.md` for all detailed rules, patterns, and examples.**
+
+## Key Reminders
+
+- Always read and follow all referenced files for the most up-to-date and complete instructions.
+- The pyramid structure: `copilot-instructions.md` (top), `aidevbridge-index.md` (middle), `rapid-prototyping-mini.md` and `requirements-management.md` (bottom, most detail).
+
+**If in doubt, start at the top and work your way down for more detail.**
 
 # Rapid Prototyping Framework Rules
 

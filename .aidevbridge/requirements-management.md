@@ -182,20 +182,6 @@ Brief description of what we're building and why.
 - Remove obsolete requirements
 - Keep document current and accurate
 
-### Version Control
-- Commit changes frequently
-- Use descriptive commit messages
-- Tag major milestone updates
-- Maintain change history
-- Document breaking changes
-
-### Collaboration
-- Share updates with team members
-- Get approval for major changes
-- Document decisions and rationale
-- Maintain consistency across sessions
-- Ensure everyone understands requirements
-
 ## Integration with Development
 
 ### Pre-Development

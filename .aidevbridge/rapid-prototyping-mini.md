@@ -31,7 +31,7 @@ This guide enables successful rapid prototyping sessions using vanilla JavaScrip
    - Generate and maintain `package.json` or `project.csproj` or whatever this projects equivellent is with necessary dependencies
    
 2. **Blank Canvas Setup**
-   - Create `index.html` with Tailwind + DaisyUI CDN
+   - Create `index.html` with Tailwind (<script src="https://cdn.tailwindcss.com"></script>) + DaisyUI CDN (<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />)
    - Add input form with large display area
    - Implement localStorage persistence
    - Test refresh behavior
@@ -84,7 +84,7 @@ As your project grows, use this structure as a color-by-number template to guide
 
 **Project Root**
 ```
-{project}/
+<sub-project>/
 ├── run.sh              # Cross-platform startup script
 ├── run.bat             # Windows startup script
 ├── stop.sh             # Cross-platform shutdown script
