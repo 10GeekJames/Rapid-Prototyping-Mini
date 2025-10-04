@@ -96,4 +96,4 @@ This file is the entry point for all rapid prototyping and requirements manageme
 
 ## Always
 - Read through the `.aidevbridge/` folder thoroughly and follow the policies and patterns inside.
-
+- Continually try to improve and arrange the on disk project structure, organize into logical folders, and name files clearly as the number of files in any folder grows.
