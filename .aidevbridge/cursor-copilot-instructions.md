@@ -1,4 +1,4 @@
-# Cursor Rules Integration for Rapid Prototyping
+# LLM Instructions for Rapid Prototyping
 
 ## Overview
 
@@ -6,31 +6,29 @@ This document provides instructions for integrating rapid prototyping capabiliti
 
 ## Integration Instructions
 
-### Add to Your Cursor Rules or Copilot Instructions
+### Rapid Prototyping Framework
 
-#### Rapid Prototyping Framework
-
-##### Core Files
+#### Core Files
 - `rapid-prototyping-mini.md` - Complete guide for 1-hour rapid prototyping sessions
 - `requirements-management.md` - Instructions for managing requirements-document.md files
 - `cursor-copilot-instructions.md` - This integration guide
 
-##### Development Principles
+#### Development Principles
 - Vanilla JavaScript ES6+ only (no frameworks for MVP)
 - HTML5 Canvas 2D API for rendering
-- Single port 8989 for all services
+- Single port 8989 for all services, static site and api
 - SQLite database (sqlite.db)
 - RESTful API under /api/ endpoints
 - Tailwind CSS + DaisyUI for styling
 
-##### File Organization
+#### File Organization
 - Keep files under 400 lines
 - Use clear, descriptive file names
 - Organize by feature, not by file type
 - Maintain single responsibility per file
 - Don't add folders and files that arne't needed or used yet
 
-##### AI Collaboration Rules
+#### AI Collaboration Rules
 - Always reference requirements-document.md
 - Update requirements as features are added
 - Test each feature before moving to the next
@@ -42,7 +40,7 @@ This document provides instructions for integrating rapid prototyping capabiliti
 
 ### When Starting a New Project
 1. **Check for requirements-document.md** in the project root
-2. **If missing, create one** using the template from requirements-management.md
+2. **If missing, create one** using the template from requirements-management.md and ask the user to give you initial requirements before starting to generate code
 3. **Review existing requirements** before making changes
 4. **Follow the rapid-prototyping-mini.md** workflow for development
 
@@ -52,6 +50,8 @@ This document provides instructions for integrating rapid prototyping capabiliti
 3. **Use the code standards** and patterns provided
 4. **Test against acceptance criteria** before marking complete
 5. **Update requirements-document.md** with progress
+6. **Routing and Navigation**: Assume the application will be run in the project folder root. Use relative paths for all file references.
+7. **Layout, Styling, and Navigation**: Use Tailwind CSS and DaisyUI for all styling. Ensure the UI is responsive and works well on different screen sizes.  Update any navigation menu as needed.  Ensure there is a common/shared layout for all pages.
 
 ### When Managing Requirements
 1. **Use the format** specified in requirements-management.md

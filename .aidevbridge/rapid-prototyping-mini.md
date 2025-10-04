@@ -1,3 +1,7 @@
+### API Backend Rules
+- If an API is needed, use a Minimal Flask API backend (Python) for rapid prototyping.
+- Always use a single port (8989) for both frontend and backend when possible.
+- Organize all backend API code in an `/api/` folder for clarity and maintainability.
 # Rapid Prototyping Mini Guide
 
 ## 1-Hour Rapid Prototyping Session Framework
@@ -51,7 +55,9 @@ This guide enables successful rapid prototyping sessions using vanilla JavaScrip
 
 ## Development Principles
 
+
 ### File Organization
+- **Always break HTML, CSS, and JS into separate files** and organize them into dedicated folders (e.g., `src/html/`, `src/css/`, `src/js/`) to keep the project clean and maintainable as it grows.
 
 #### Progressive Architecture
 Start with simple static files and only add complexity when needed. Many projects will never need more than HTML, CSS, and JavaScript files. Only add server-side code, APIs, and databases when the project actually requires them. Build one clear pathway through the system rather than creating multiple approaches.
@@ -111,8 +117,10 @@ When creating any project, the AI assistant must generate `run.sh`/`run.bat` and
 - **Store process ID** for clean shutdown
 - **Provide clear feedback** about what's happening
 
+
 #### Stop Scripts Must:
 - **Find and terminate** the running process (using stored PID or port detection)
+- **Forcefully kill any process listening on port 8989** to ensure reliable shutdown, especially in Codespaces and dev containers
 - **Clean up any temporary files** or processes
 - **Provide confirmation** that services have stopped
 - **Handle cases** where no process is running
