@@ -31,7 +31,8 @@ This file is the entry point for all rapid prototyping and requirements manageme
 
 ## Core Instructions
 - Thoroughly read and apply all guidance from the `.aidevbridge/` folder.
-- Always reference `.aidevbridge/requirements-document.md` for project scope and acceptance criteria, and `.aidevbridge/requirements-management.md` for rules to help build backlogs and manage requirements.
+- Always reference the `requirements-document.md` in your current project folder for project scope and acceptance criteria.
+- Use `.aidevbridge/requirements-management.md` (in `.aidevbridge/`) for rules and templates to help build and maintain requirements-document.md files.
 - Follow the `.aidevbridge/rapid-prototyping-mini.md` workflow for rapid prototyping development sessions.
 - Use `.aidevbridge/cursor-copilot-instructions.md` for code standards and patterns.
 
@@ -43,7 +44,7 @@ This file is the entry point for all rapid prototyping and requirements manageme
 - Remove legacy or dead code instead of keeping it "just in case." If unsure, document the reason for keeping code.
 
 ## Script Creation Rules
-- Generate `run.sh`/`run.bat` and `stop.sh`/`stop.bat` for every project. On Linux/macOS, set executable permission when needed: `chmod +x ./run.sh ./stop.sh`.
+- Generate `run.sh`/`run.bat` and `stop.sh`/`stop.bat` for every project. On Linux/macOS, set executable permission when needed: `chmod +x ./run.sh ./stop.sh`.  Make sure to test the scripts to ensure they work as expected and change executable permissions if needed.
 - Never use emojis, extended ASCII, or special characters in scripts; use plain ASCII only.
 - Avoid nested parentheses inside parentheses—use alternative structures or clearer control flow.
 - Avoid mixing nested quotes; prefer consistent quoting patterns to prevent shell parsing issues.
@@ -72,10 +73,7 @@ This file is the entry point for all rapid prototyping and requirements manageme
 - Provide RESTful APIs under `/api/` endpoints for server components; keep them small and well-documented.
 
 ## Quality Gates
-- Test each feature before moving to the next; use small, fast tests suitable for rapid iteration.
-- Update `.aidevbridge/requirements-document.md` as features are completed to keep scope and acceptance criteria current.
-- Ensure `run`/`stop` scripts work on the target platform and perform clean shutdowns to avoid orphaned processes.
-- All acceptance criteria specified in `.aidevbridge/requirements-document.md` must be met before marking a feature or project complete.
+- Update the `requirements-document.md` in your project folder as features are completed to keep scope and acceptance criteria current.
 
 ## Development Workflow
 - Always work to implement the user's requests as completely and thoroughly as possible within the session scope.
@@ -91,9 +89,10 @@ This file is the entry point for all rapid prototyping and requirements manageme
 - When creating batch files for Windows, use clear stepwise commands and explicit errorlevel checks.
 
 ## Notes on Documentation and Maintainability
-- Keep documentation close to code: small READMEs, inline comments, and a top-level `requirements-document.md`.
+- Keep documentation close to code: small READMEs, inline comments, and a `requirements-document.md` in each project folder.
 - When keeping non-obvious decisions or code, add a short comment explaining why it remains.
 
 ## Always
 - Read through the `.aidevbridge/` folder thoroughly and follow the policies and patterns inside.
+- Remember: `requirements-document.md` files live in each project folder, while `.aidevbridge/requirements-management.md` is the global instructions file for crafting them.
 - Continually try to improve and arrange the on disk project structure, organize into logical folders, and name files clearly as the number of files in any folder grows.
