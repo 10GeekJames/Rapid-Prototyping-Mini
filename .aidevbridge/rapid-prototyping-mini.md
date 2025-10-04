@@ -1,3 +1,7 @@
+### Data Storage and Change Propagation
+- If the user needs to store information (such as form submissions), always create a full backend using an `/api/` folder and a SQLite database for persistence.
+- When making changes (e.g., to models, domains, or data structure), always update all pertinent layers: backend, frontend, database schema, and API endpoints.
+- Rename files, folders, and update all references as needed to keep the project consistent and maintainable before moving on to new features.
 ### API Backend Rules
 - If an API is needed, use a Minimal Flask API backend (Python) for rapid prototyping.
 - Always use a single port (8989) for both frontend and backend when possible.
@@ -56,8 +60,13 @@ This guide enables successful rapid prototyping sessions using vanilla JavaScrip
 ## Development Principles
 
 
-### File Organization
-- **Always break HTML, CSS, and JS into separate files** and organize them into dedicated folders (e.g., `src/html/`, `src/css/`, `src/js/`) to keep the project clean and maintainable as it grows.
+-### File Organization
+- **Never use inline `<script>` or `<style>` tags in HTML files.** Always separate HTML, CSS, and JS into their own files for every feature and page.
+- **Always break HTML, CSS, and JS into separate files** and organize them into dedicated folders to keep the project clean and maintainable as it grows.
+- **For each feature or page (e.g., blog, dashboard, common layout), create a folder (e.g., `/blog/`, `/common/`) and place separate `.html`, `.css`, and `.js` files inside (e.g., `/blog/blog.html`, `/blog/blog.css`, `/blog/blog.js`).**
+- **Keep `index.html` in the project root for the main entry point. All other pages and their assets should be organized by feature in their own folders.**
+- **Do not combine multiple pages or features into a single HTML file.**
+- **This structure ensures clarity, scalability, and maintainability as the project grows.**
 
 #### Progressive Architecture
 Start with simple static files and only add complexity when needed. Many projects will never need more than HTML, CSS, and JavaScript files. Only add server-side code, APIs, and databases when the project actually requires them. Build one clear pathway through the system rather than creating multiple approaches.
