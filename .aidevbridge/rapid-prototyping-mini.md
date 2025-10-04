@@ -77,6 +77,12 @@ Start with simple static files and only add complexity when needed. Many project
 - **Single pathway**: Build one clear path through the system - don't create alternative approaches
 - **No legacy code**: Don't keep old code "just in case" - clean it up immediately
 - **Refactor, don't duplicate**: Improve existing code instead of creating new versions
+
+### On Disk Architecture: The Color-by-Number Template
+
+As your project grows, use this structure as a color-by-number template to guide your file and folder organization. Start simple, and as new features or needs arise, "unpack" the next layer of this structure. This ensures your codebase remains clean, scalable, and easy to navigate at every stage.
+
+**Project Root**
 ```
 {project}/
 ├── run.sh              # Cross-platform startup script
@@ -85,19 +91,43 @@ Start with simple static files and only add complexity when needed. Many project
 ├── stop.bat            # Windows shutdown script
 ├── package.json        # Dependencies and scripts
 ├── requirements-document.md
-├── src/
-│   ├── index.html
-│   ├── css/
-│   │   └── styles.css
-│   └── js/
-│       ├── main.js
-│       ├── router.js
-│       ├── api.js
-│       └── storage.js
-└── server/
-    ├── index.js
-    └── database.js
+├── api/                # All backend API endpoints (expand as needed)
+│   └── {endpoint}.js
+├── src/                # All frontend code
+│   ├── index.html      # Main entry point
+│   ├── {page}/         # Each feature/page in its own folder
+│   │   ├── {page}.html
+│   │   ├── {page}.js
+│   │   └── {page}.css
+│   ├── {page}/{component}/   # Components for each page
+│   │   └── {component}.html
+│   │   └── {component}.js
+│   │   └── {component}.css
+│   ├── shared/         # Shared layouts, utilities, and components
+│   │   ├── layout.html
+│   │   ├── layout.js
+│   │   ├── layout.css
+│   │   ├── main.js
+│   │   ├── router.js
+│   │   ├── api.js
+│   │   └── storage.js
+│   │   └── {component}/
+│   │       └── {component}.html
+│   │       └── {component}.js
+│   │       └── {component}.css
+└── data/
+    └── database.js     # Database logic (if needed)
 ```
+
+**How to Use This Template:**
+- Start with just `index.html` and a single folder for your first feature.
+- As you add features, create a new folder for each page/feature and split out HTML, CSS, and JS.
+- Add a `shared/` folder for layouts, utilities, and components used across multiple pages.
+- Place all backend API endpoints in the `api/` folder, and all database logic in `data/`.
+- Expand the structure only as your needs grow—never overload a single file or folder.
+
+This approach makes it easy to scale from a simple prototype to a robust, maintainable application. Treat this as your "color-by-number" guide for project organization.
+
 
 ### Code Standards
 - **Single Responsibility**: One purpose per file
