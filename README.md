@@ -39,6 +39,12 @@ If in doubt, start at the top and go deeper as needed.
   - Clean up unused code immediately; refactor rather than duplicate.  
   - Test each feature before moving on.  
   - Generate and maintain `run.sh` / `stop.sh` and `run.bat` / `stop.bat` for every project.  
+    - `run.sh`/`run.bat` must install dependencies and start the Node (Express) server so that both API endpoints and static frontend files are served together on port 8989 (or the port set by `PORT`).
+    - `stop.sh`/`stop.bat` must reliably stop the server by killing any process using port 8989 (or the configured port), ensuring a clean shutdown even if the process was started outside the script.
+    - Scripts should use only standard ASCII, avoid nested parentheses/quotes, and provide clear output.
+    - Never use Python or other languages for these scripts—Node/Express is the standard for serving and process management.
+    - See `.aidevbridge/rapid-prototyping-mini.md` for detailed script patterns and examples.
+  
 
 ---
 

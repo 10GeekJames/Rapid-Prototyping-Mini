@@ -23,6 +23,11 @@ This file documents the **unique rules, patterns, and preferences** that LLMs (C
 - **Build one clear pathway—no competing approaches.**
 - **Document any non-obvious decisions or tradeoffs in requirements-document.md.**
 
+
+## Serving Frontend & API with Node (Express)
+
+When using Node (Express), always serve both your API endpoints and static frontend files (HTML, JS, CSS) from the same Express server, all on port 8989. This is the most common and scalable approach. Do not split frontend and backend into separate servers/ports unless there is a specific advanced requirement.
+
 ## Project Structure (Color-by-Number Template)
 
 ```
@@ -36,15 +41,7 @@ This file documents the **unique rules, patterns, and preferences** that LLMs (C
 ├── src/
 │   ├── index.html      # Main entry point
 │   ├── frontend.js       # Frontend logic
-│   ├── backend.js       # Backend/API logic
-│   ├── {page}/         # Each feature/page in its own folder
-│   │   ├── {page}.html
-│   │   ├── {page}.js
-│   │   └── {page}.css
-│   ├── {page}/{component}/   # Components for each page
-│   │   └── {component}.html
-│   │   └── {component}.js
-│   │   └── {component}.css
+│   ├── server.js       # Backend/API logic
 |   ├── blogs/
 |   │   ├── blog.html
 |   │   ├── blog.js
@@ -58,24 +55,37 @@ This file documents the **unique rules, patterns, and preferences** that LLMs (C
 |   │   ├── result.js
 |   │   └── result.css
 │   ├── shared/         # Shared layouts, utilities, and components
-│   │   ├── layout.html
+│   │   ├── layout.html # Make sure this file exists and make sure all other pages share it, it handles any navigation, and uses the router.js to handle navigation
 │   │   ├── layout.js
 │   │   ├── layout.css
 │   │   ├── router.js
 │   │   └── storage.js
-│   │   └── {component}/
-│   │       └── {component}.html
-│   │       └── {component}.js
-│   │       └── {component}.css
+│   │   └── Navigation/
+│   │       └── NavMenu.html
+│   │       └── NavMenu.js
+│   │       └── NavMenu.css
+│   ├── {page}/         # Each feature/page in its own folder (html | js | css)
+│   ├── {page}/{component}/   # Components for each page  (html | js | css)
 │   ├── api/
 │   │   ├── {database-name}.db # Actual database files
 │   │   └── database.js     # Database logic (if needed)
 ```
 
+### Path Handling for Node.js Projects
+> **Tip:** All Node.js code in this project is always run from inside the `/src/` folder. When writing code that uses relative paths (e.g., `fs.readFileSync`, `require`, etc.), **do not prefix paths with `/src/`**. Assume the working directory is already `/src/`.
+
+**Example:**
+
+- Good: `require('./utils/helper.js')`
+- Bad: `require('/src/utils/helper.js')`
+
+This ensures portability and prevents path errors when running scripts or modules.
+
 **How to use this:**
-- Start with just `index.html` and a folder for your first feature.
+- Start with just `index.html` (the home page) and a folder for your first feature.
+- The home page should always provide a full menu linking to all other pages/features.
+- Every other page should include a simple "Back" button that returns the user to the home page (index.html).
 - Add new folders for each feature/page as you grow.
-- Use `shared/` for layouts/utilities/components used across pages.
 - Only add `server.js` and `data/database.js` if you need persistence or backend logic.
 
 ## Change Propagation & Data Storage
@@ -101,6 +111,7 @@ This file documents the **unique rules, patterns, and preferences** that LLMs (C
 - Do not combine multiple pages or features into a single HTML file.
 - Remove unused code, files, and folders immediately.
 - Refactor and improve existing code, don't duplicate.
+- json files and json data cannot have code comments
 
 ## New Projects
 
