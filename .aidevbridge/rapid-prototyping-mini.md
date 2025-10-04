@@ -272,7 +272,7 @@ db.run(`
 - [ ] Stop scripts clean up processes properly
 
 ### Final Session Checklist
-- [ ] All requirements from requirements-document.md completed
+- [ ] All requirements from projects requirements-document.md completed
 - [ ] Full-stack functionality working
 - [ ] Database properly seeded
 - [ ] API endpoints documented

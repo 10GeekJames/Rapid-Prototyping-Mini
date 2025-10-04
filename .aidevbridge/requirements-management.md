@@ -1,3 +1,7 @@
+# Project Folder Placement
+- **Never create `requirements-document.md` in the repository root.** It must always be placed inside the correct project folder.
+- If starting a new project, create the project folder first /{project-name}/, then add the backlog (`requirements-document.md`) inside that folder.
+
 # Requirements Management for Rapid Prototyping
 
 ## Overview
@@ -7,7 +11,7 @@ The `requirements-document.md` file serves as the single source of truth for pro
 ## File Structure
 
 ### Location
-- **Root Level**: `requirements-document.md` in project root
+- **Project Root Level**: `requirements-document.md` in project root
 - **Format**: Markdown with numbered requirements
 - **Updates**: Live document, updated as features are added
 

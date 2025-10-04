@@ -2,32 +2,38 @@
 applyTo: "**"
 ---
 
+## PATH CONTRACT (MUST FOLLOW)
+- All generated files MUST live under `/{project-name}/` (or its subfolders).
+- If no path is specified, ASSUME `/{project-name}/`.
+- Do NOT create or modify files at repository root. Ever.
+- When responding, FIRST print a file plan (paths + filenames), THEN the content
+
 ## Rapid Prototyping Copilot Instructions (High-Level Index)
 
 This file is the entry point for all rapid prototyping and requirements management guidance in this repository.
 
-**Start here, then read through and reference all files mentioned in [`aidevbridge-index.md`](../.aidevbridge/aidevbridge-index.md).**
+**Start here, then read through and reference all files mentioned in [`aidevbridge-index.md`](.aidevbridge/aidevbridge-index.md).**
 
 ## How to Use This Repository
 
 1. **Begin with this file for a high-level overview.**
-2. **Move to `aidevbridge-index.md` for a summary of key rules and where to find details.**
-3. **Dive into `rapid-prototyping-mini.md` and `requirements-management.md` for all detailed rules, patterns, and examples.**
+2. **Move to `.aidevbridge/aidevbridge-index.md` for a summary of key rules and where to find details.**
+3. **Dive into `.aidevbridge/rapid-prototyping-mini.md` and `.aidevbridge/requirements-management.md` for all detailed rules, patterns, and examples.**
 
 ## Key Reminders
 
 - Always read and follow all referenced files for the most up-to-date and complete instructions.
-- The pyramid structure: `copilot-instructions.md` (top), `aidevbridge-index.md` (middle), `rapid-prototyping-mini.md` and `requirements-management.md` (bottom, most detail).
+- The pyramid structure: `.github/copilot-instructions.md` (top), `.aidevbridge/aidevbridge-index.md` (middle), `.aidevbridge/rapid-prototyping-mini.md` and `.aidevbridge/requirements-management.md` (bottom, most detail).
 
 **If in doubt, start at the top and work your way down for more detail.**
 
 # Rapid Prototyping Framework Rules
 
 ## Core Instructions
-- Thoroughly read and apply all guidance from the `.aidevbridge` folder.
-- Always reference `requirements-document.md` for project scope and acceptance criteria, and `requirements-management.md` for rules to help build backlogs and manage requirements.
-- Follow the `rapid-prototyping-mini.md` workflow for 1-hour development sessions.
-- Use `cursor-copilot-instructions.md` for code standards and patterns.
+- Thoroughly read and apply all guidance from the `.aidevbridge/` folder.
+- Always reference `.aidevbridge/requirements-document.md` for project scope and acceptance criteria, and `.aidevbridge/requirements-management.md` for rules to help build backlogs and manage requirements.
+- Follow the `.aidevbridge/rapid-prototyping-mini.md` workflow for 1-hour development sessions.
+- Use `.aidevbridge/cursor-copilot-instructions.md` for code standards and patterns.
 
 ## Development Principles
 - Start with simple static files; add complexity only when needed.
@@ -67,9 +73,9 @@ This file is the entry point for all rapid prototyping and requirements manageme
 
 ## Quality Gates
 - Test each feature before moving to the next; use small, fast tests suitable for rapid iteration.
-- Update `requirements-document.md` as features are completed to keep scope and acceptance criteria current.
+- Update `.aidevbridge/requirements-document.md` as features are completed to keep scope and acceptance criteria current.
 - Ensure `run`/`stop` scripts work on the target platform and perform clean shutdowns to avoid orphaned processes.
-- All acceptance criteria specified in `requirements-document.md` must be met before marking a feature or project complete.
+- All acceptance criteria specified in `.aidevbridge/requirements-document.md` must be met before marking a feature or project complete.
 
 ## Development Workflow
 - Always work to implement the user's requests as completely and thoroughly as possible within the session scope.
@@ -89,5 +95,5 @@ This file is the entry point for all rapid prototyping and requirements manageme
 - When keeping non-obvious decisions or code, add a short comment explaining why it remains.
 
 ## Always
-- Read through the `.aidevbridge` folder thoroughly and follow the policies and patterns inside.
+- Read through the `.aidevbridge/` folder thoroughly and follow the policies and patterns inside.
 

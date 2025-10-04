@@ -1,20 +1,51 @@
+## PATH CONTRACT (MUST FOLLOW)
+- All generated files MUST live under `/{project-name}/` (or its subfolders).
+- If no path is specified, ASSUME `/{project-name}/`.
+- Do NOT create or modify files at repository root. Ever.
+- When responding, FIRST print a file plan (paths + filenames), THEN the content
+
 # AI DevBridge Index
 
 This file is the central index and medium-level router for all rapid prototyping and requirements management guidance in this repository.
 
+## Always read these files into memory
+
+- .aidevbridge/rapid-prototyping-mini.md
+- .aidevbridge/requirements-management.md
+
 ## Where to Find Guidance
 
-- For the full rapid prototyping framework, project structure, and development workflow rules, **see [`rapid-prototyping-mini.md`](./rapid-prototyping-mini.md)**.
-- For requirements management, backlog building, and requirements-document.md usage, **see [`requirements-management.md`](./requirements-management.md)**.
+- For the full rapid prototyping framework, project structure, and development workflow rules, **see [`rapid-prototyping-mini.md`](.aidevbridge/rapid-prototyping-mini.md)**.
+- For requirements management, backlog building, and requirements-document.md usage, **see [`requirements-management.md`](.aidevbridge/requirements-management.md)**.
+
 
 ## Key Principles (from the detailed guides)
 
-- **Always break HTML, CSS, and JS into separate files and organize by feature.**
-- **Never use inline `<script>` or `<style>` tags.**
-- **Use a color-by-number folder structure as your project grows.**
-- **If you need to store data, create a full backend in `/api/` with SQLite.**
-- **Use a Minimal Flask API backend for APIs, on a single port, in `/api/`.**
-- **Keep requirements-document.md up to date and reference it for all scope and acceptance criteria.**
+- **Always break HTML, CSS, and JS into separate files and organize by feature.** (See `rapid-prototyping-mini.md` for full file/folder structure guidance.)
+- **Never use inline `<script>` or `<style>` tags.** (Detailed in `rapid-prototyping-mini.md`.)
+- **Use a color-by-number folder structure as your project grows.** (See the architecture section in `rapid-prototyping-mini.md`.)
+- **If you need to store data, create a full backend in `/api/` with SQLite.** (Backend/API rules in `rapid-prototyping-mini.md`.)
+- **Use a Minimal Flask API backend for APIs, on a single port, in `/api/`.** (API backend rules in `rapid-prototyping-mini.md`.)
+- **Keep requirements-document.md up to date and reference it for all scope and acceptance criteria.** (See `requirements-management.md` for backlog and requirements rules.)
+- **Never create `requirements-document.md` in the repository root.** It must always be placed inside the correct project folder. (See `requirements-management.md` for placement and backlog management.)
+
+## How to Use This Repository
+
+1. **Start with `copilot-instructions.md`** for a high-level overview and links to these guides.
+2. **Use this file as your quick reference for the most important rules and where to find details.**
+3. **Dive into `rapid-prototyping-mini.md` and `requirements-management.md` for all detailed rules, patterns, and examples.**
+4. **Reference `rapid-prototyping-mini.md` for all project structure, file/folder, and workflow rules.**
+5. **Reference `requirements-management.md` for all requirements, backlog, and acceptance criteria management.**
+
+## Why This Structure?
+
+This pyramid approach ensures:
+- Consistency and clarity across all projects (see `rapid-prototyping-mini.md` for structure, `requirements-management.md` for requirements)
+- Easy onboarding for new contributors (read all three: this index, `rapid-prototyping-mini.md`, and `requirements-management.md`)
+- Rapid, high-quality prototyping (follow the detailed workflow in `rapid-prototyping-mini.md`)
+- Maintainable, scalable codebases (see both detailed guides for best practices)
+
+**If in doubt, start at the top and work your way down for more detail. Reference `rapid-prototyping-mini.md` and `requirements-management.md` often.**
 
 ## How to Use This Repository
 
@@ -51,8 +82,8 @@ This document provides instructions for integrating rapid prototyping capabiliti
 
 ## Where to Find Guidance
 
-- For all rapid prototyping, project structure, and development workflow rules, **see [`copilot-instructions.md`](../.github/copilot-instructions.md)**.
-- For requirements management, backlog building, and requirements-document.md usage, **see [`requirements-management.md`](./requirements-management.md)**.
+- For all rapid prototyping, project structure, and development workflow rules, **see [`copilot-instructions.md`](.github/copilot-instructions.md)**.
+- For requirements management, backlog building, and requirements-document.md usage, **see [`requirements-management.md`](.aidevbridge/requirements-management.md)**.
 
 ## How to Use This Repository
 
