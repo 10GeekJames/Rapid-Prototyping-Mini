@@ -32,7 +32,7 @@ This file is the entry point for all rapid prototyping and requirements manageme
 ## Core Instructions
 - Thoroughly read and apply all guidance from the `.aidevbridge/` folder.
 - Always reference `.aidevbridge/requirements-document.md` for project scope and acceptance criteria, and `.aidevbridge/requirements-management.md` for rules to help build backlogs and manage requirements.
-- Follow the `.aidevbridge/rapid-prototyping-mini.md` workflow for 1-hour development sessions.
+- Follow the `.aidevbridge/rapid-prototyping-mini.md` workflow for rapid prototyping development sessions.
 - Use `.aidevbridge/cursor-copilot-instructions.md` for code standards and patterns.
 
 ## Development Principles

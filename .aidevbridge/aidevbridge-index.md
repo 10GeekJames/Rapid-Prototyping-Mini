@@ -24,8 +24,8 @@ This file is the central index and medium-level router for all rapid prototyping
 - **Always break HTML, CSS, and JS into separate files and organize by feature.** (See `rapid-prototyping-mini.md` for full file/folder structure guidance.)
 - **Never use inline `<script>` or `<style>` tags.** (Detailed in `rapid-prototyping-mini.md`.)
 - **Use a color-by-number folder structure as your project grows.** (See the architecture section in `rapid-prototyping-mini.md`.)
-- **If you need to store data, create a full backend in `/api/` with SQLite.** (Backend/API rules in `rapid-prototyping-mini.md`.)
-- **Use a Minimal Flask API backend for APIs, on a single port, in `/api/`.** (API backend rules in `rapid-prototyping-mini.md`.)
+- **If you need to store data, create a full backend in `/src/api/` with SQLite.** (Backend/API rules in `rapid-prototyping-mini.md`.)
+- **Use a Minimal Flask API backend for APIs, on a single port, in `/src/api/`.** (API backend rules in `rapid-prototyping-mini.md`.)
 - **Keep requirements-document.md up to date and reference it for all scope and acceptance criteria.** (See `requirements-management.md` for backlog and requirements rules.)
 - **Never create `requirements-document.md` in the repository root.** It must always be placed inside the correct project folder. (See `requirements-management.md` for placement and backlog management.)
 

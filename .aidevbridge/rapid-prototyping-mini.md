@@ -1,14 +1,60 @@
 ### Data Storage and Change Propagation
-- If the user needs to store information (such as form submissions), always create a full backend using an `/api/` folder and a SQLite database for persistence.
+ - If the user needs to store information (such as form submissions), always create a full backend using `server.js` and a SQLite database for persistence.
+ - When making changes (e.g., to models, domains, or data structure), always update all pertinent layers: backend, frontend, database schema, and API endpoints.
+### API Backend Rules
+ - If an API is needed, use a Minimal Express API backend (Node.js) for rapid prototyping.
+ - Always use a single port (8989) for both frontend and backend when possible.
+## Rapid Prototyping Mini Guide
+
+## Core Stack (No Dependencies)
+ - build in /{Project}/src/ so users can have multiple ideas in one repo, /{Project}/src/(client | server | server/data)
+**Project Root**
+```
+<sub-project>/
+├── run.sh              # Cross-platform startup script
+├── run.bat             # Windows startup script
+├── stop.sh             # Cross-platform shutdown script
+├── stop.bat            # Windows shutdown script
+├── package.json        # Dependencies and scripts
+├── requirements-document.md
+├── src/                # All code
+│   ├── index.html      # Main entry point
+│   ├── client.js       # Frontend logic
+│   ├── server.js       # Backend/API logic
+│   ├── {page}/         # Each feature/page in its own folder
+│   │   ├── {page}.html
+│   │   ├── {page}.js
+│   │   └── {page}.css
+│   ├── {page}/{component}/   # Components for each page
+│   │   └── {component}.html
+│   │   └── {component}.js
+│   │   └── {component}.css
+│   ├── shared/         # Shared layouts, utilities, and components
+│   │   ├── layout.html
+│   │   ├── layout.js
+│   │   ├── layout.css
+│   │   ├── main.js
+│   │   ├── router.js
+│   │   └── storage.js
+│   │   └── {component}/
+│   │       └── {component}.html
+│   │       └── {component}.js
+│   │       └── {component}.css
+│   ├── data/
+│   │   └── database.js     # Database logic (if needed)
+```
+ - Place all backend logic in `server.js` and all database logic in `data/database.js`.
+### Data Storage and Change Propagation
+- If the user needs to store information (such as form submissions), always create a full backend using an `/src/api/` folder and a SQLite database for persistence.
 - When making changes (e.g., to models, domains, or data structure), always update all pertinent layers: backend, frontend, database schema, and API endpoints.
 - Rename files, folders, and update all references as needed to keep the project consistent and maintainable before moving on to new features.
 ### API Backend Rules
 - If an API is needed, use a Minimal Flask API backend (Python) for rapid prototyping.
 - Always use a single port (8989) for both frontend and backend when possible.
-- Organize all backend API code in an `/api/` folder for clarity and maintainability.
+- Organize all backend API code in an `/src/api/` folder for clarity and maintainability.
 # Rapid Prototyping Mini Guide
 
-## 1-Hour Rapid Prototyping Session Framework
+## Rapid Prototyping Session Framework
 
 This guide enables successful rapid prototyping sessions using vanilla JavaScript, HTML5 Canvas, and modern web APIs. Perfect for pre-sales demonstrations and learning sessions.
 
@@ -80,7 +126,7 @@ Start with simple static files and only add complexity when needed. Many project
 
 ### On Disk Architecture: The Color-by-Number Template
 
-As your project grows, use this structure as a color-by-number template to guide your file and folder organization. Start simple, and as new features or needs arise, "unpack" the next layer of this structure. This ensures your codebase remains clean, scalable, and easy to navigate at every stage.
+As your project grows, use this structure as a color-by-number template to guide your file and folder organization. Start simple, and as new features or needs arise, "unpack" the next layer of this structure. This ensures your codebase remains clean, scalable, and easy to navigate at every stage.  Do not add api and data unless the user is asking to use a database
 
 **Project Root**
 ```
@@ -91,8 +137,6 @@ As your project grows, use this structure as a color-by-number template to guide
 ├── stop.bat            # Windows shutdown script
 ├── package.json        # Dependencies and scripts
 ├── requirements-document.md
-├── api/                # All backend API endpoints (expand as needed)
-│   └── {endpoint}.js
 ├── src/                # All frontend code
 │   ├── index.html      # Main entry point
 │   ├── {page}/         # Each feature/page in its own folder
@@ -109,14 +153,15 @@ As your project grows, use this structure as a color-by-number template to guide
 │   │   ├── layout.css
 │   │   ├── main.js
 │   │   ├── router.js
-│   │   ├── api.js
 │   │   └── storage.js
 │   │   └── {component}/
 │   │       └── {component}.html
 │   │       └── {component}.js
 │   │       └── {component}.css
-└── data/
-    └── database.js     # Database logic (if needed)
+│   ├── api/                 # All backend API endpoints (expand as needed)
+|   │   └── {endpoint}.js
+└── |   data/
+    |   └── database.js     # Database logic (if needed)
 ```
 
 **How to Use This Template:**
