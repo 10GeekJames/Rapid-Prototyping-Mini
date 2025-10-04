@@ -11,6 +11,7 @@ This guide enables successful rapid prototyping sessions using vanilla JavaScrip
 - **Backend**: Node.js with Express (single port 8989)
 - **Database**: SQLite (sqlite.db) via the 'sqlite3' npm package (use 'sqlite3' for Node.js v22+ compatibility)
 - **API**: RESTful endpoints under `/api/`
+- use a lightweight Node.js/JavaScript backend or a static form handler service, keeping everything in JavaScript and reducing technology sprawl
 
 
 ## Session Flow (60 minutes)
